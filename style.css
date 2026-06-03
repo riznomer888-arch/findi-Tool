@@ -1,0 +1,313 @@
+:root {
+    --bg-main: #050505;       
+    --bg-card: #0b0b0b;       
+    --bg-sidebar: #080808;    
+    --accent: #ffffff;        
+    --text-main: #e5e5e5;     
+    --text-muted: #737373;    
+    --border: #262626;        
+    --border-focus: #525252;  
+    --btn-hover: #171717;     
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; 
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: var(--bg-sidebar);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
+    flex-shrink: 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+    padding-left: 10px;
+}
+
+.logo-icon {
+    font-size: 14px;
+    color: var(--accent);
+}
+
+.brand h2 {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+}
+
+.menu-item {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    text-align: left;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.menu-item:hover, .menu-item.active {
+    color: var(--accent);
+    background-color: var(--bg-card);
+    box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.sidebar-footer {
+    color: var(--text-muted);
+    font-size: 11px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-main);
+}
+
+.google-search-section {
+    padding: 60px 40px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.search-wrapper {
+    width: 100%;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 24px; 
+    padding: 12px 20px;
+    width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-box:focus-within {
+    border-color: var(--border-focus);
+    background-color: #0d0d0d;
+}
+
+.search-icon {
+    font-size: 14px;
+    margin-right: 12px;
+    color: var(--text-muted);
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+
+.search-buttons-group {
+    display: flex;
+    gap: 10px;
+}
+
+.google-btn {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.google-btn:hover {
+    border-color: var(--border-focus);
+    background-color: var(--btn-hover);
+}
+
+.text-muted-btn {
+    color: var(--text-muted);
+}
+
+.links-output {
+    width: 100%;
+    max-width: 680px;
+    margin-top: 25px;
+    padding: 20px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.links-output.hidden {
+    display: none;
+}
+
+.scan-link {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    transition: all 0.15s;
+}
+
+.scan-link:hover {
+    border-color: var(--accent);
+    background-color: var(--btn-hover);
+}
+
+.results-section {
+    padding: 30px 40px;
+    flex-grow: 1;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+.section-title h3 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.counter {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.osint-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.2s;
+}
+
+.osint-card:hover {
+    border-color: var(--border-focus);
+}
+
+.card-top h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.card-top p {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.visit-btn {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.15s;
+}
+
+.visit-btn:hover {
+    border-color: var(--accent);
+    background-color: var(--btn-hover);
+}
+
+@media (max-width: 768px) {
+    .app-container { flex-direction: column; }
+    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+    .google-search-section, .results-section { padding: 20px; }
+}
