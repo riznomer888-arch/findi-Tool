@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHERBOF // Intelligence System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="logo-icon">▪</span>
+                <h2>SHERBOF</h2>
+            </div>
+            <nav class="menu">
+                <button class="menu-item active" data-category="all">Все модули</button>
+                <button class="menu-item" data-category="utils">Утилиты</button>
+                <button class="menu-item" data-category="username">Поиск по нику</button>
+                <button class="menu-item" data-category="email">Проверка почты</button>
+                <button class="menu-item" data-category="ip">Проверка IP</button>
+                <button class="menu-item" data-category="phone">Проверка номера</button>
+                <button class="menu-item" data-category="telegram">Telegram боты</button>
+                <button class="menu-item" data-category="leaks">Утечки и пароли</button>
+                <button class="menu-item" data-category="cybersec">Кибербезопасность</button>
+            </nav>
+            <div class="sidebar-footer">
+                <p>OSINT Platform v3.5</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <section class="google-search-section">
+                <div class="search-wrapper">
+                    <div class="search-box">
+                        <span class="search-icon">🔎</span>
+                        <input type="text" id="main-search-input" placeholder="Введите ник, email или IP для пробива...">
+                    </div>
+                    <div class="search-buttons-group">
+                        <button id="start-scan-btn" class="google-btn">Запустить OSINT поиск</button>
+                        <button id="clear-search-btn" class="google-btn text-muted-btn">Очистить</button>
+                    </div>
+                </div>
+                
+                <div id="scan-links-output" class="links-output hidden"></div>
+            </section>
+
+            <section class="results-section">
+                <div class="section-title">
+                    <h3 id="category-title">Все доступные ресурсы</h3>
+                    <span class="counter" id="resource-counter">0 ресурсов</span>
+                </div>
+
+                <div class="grid-layout" id="database-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>\hhh
